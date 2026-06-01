@@ -4,6 +4,11 @@
   "description": "GitHub Actions CI/CD 학습용 계산기",
   "type": "module",
   "scripts": {
-    "start": "npx http-server src -p 8080 -c-1"
+    "start": "npx http-server src -p 8080 -c-1",
+    "lint": "eslint src tests/unit tests/integration",
+    "audit": "npm audit --audit-level=high",
+    "test:unit": "jest tests/unit",
+    "test:integration": "jest tests/integration",
+    "test": "jest"
   }
 }
